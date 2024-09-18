@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly To-Do List</h1>
+        <div class="task-input">
+            <select id="day-select">
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+            </select>
+            <input type="text" id="new-task" placeholder="Add a new task...">
+            <button onclick="addTask()">Add</button>
+            <button onclick="refreshData()">Refresh Data</button>
+        </div>
+        <div id="task-container">
+            <div class="day-section" id="section-Sunday">
+                <h2>Sunday</h2>
+                <ul id="tasks-Sunday"></ul>
+            </div>
+            <div class="day-section" id="section-Monday">
+                <h2>Monday</h2>
+                <ul id="tasks-Monday"></ul>
+            </div>
+            <div class="day-section" id="section-Tuesday">
+                <h2>Tuesday</h2>
+                <ul id="tasks-Tuesday"></ul>
+            </div>
+            <div class="day-section" id="section-Wednesday">
+                <h2>Wednesday</h2>
+                <ul id="tasks-Wednesday"></ul>
+            </div>
+            <div class="day-section" id="section-Thursday">
+                <h2>Thursday</h2>
+                <ul id="tasks-Thursday"></ul>
+            </div>
+            <div class="day-section" id="section-Friday">
+                <h2>Friday</h2>
+                <ul id="tasks-Friday"></ul>
+            </div>
+            <div class="day-section" id="section-Saturday">
+                <h2>Saturday</h2>
+                <ul id="tasks-Saturday"></ul>
+            </div>
+        </div>
+        <h2>Weekly Summary</h2>
+        <canvas id="weekly-summary" width="400" height="200"></canvas>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
